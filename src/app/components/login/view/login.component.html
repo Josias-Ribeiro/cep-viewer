@@ -1,3 +1,7 @@
 <po-page-login
-(p-login-submit)="loginSubmit($event)"
+[p-literals]="customLiterals"
+p-login-pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+p-password-pattern=".{8,}"
+[p-hide-remember-user]="true"
+(p-login-submit)="loginSubmit($event)">
 ></po-page-login>
