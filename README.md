@@ -2,6 +2,10 @@
 
 Este projeto foi criado com o [Angular CLI](https://github.com/angular/angular-cli) na versão 15.0.0.
 
+## Instalar as dependências externas do projeto
+
+Ao baixar ou clonar o projeto, entre na raiz, e execute npm i para que sejam instaladas as dependências do projeto. É necessário que seu Angular esteja na versão 15, em virtude da versão compatível do Portinari UI.
+
 ## Servidor de Desenvolvimento
 
 Execute `ng serve` para iniciar o servidor de desenvolvimento. Acesse `http://localhost:4200/` no seu navegador. A aplicação será automaticamente recarregada se você alterar qualquer um dos arquivos de origem.
@@ -9,8 +13,7 @@ Execute `ng serve` para iniciar o servidor de desenvolvimento. Acesse `http://lo
 
 ## Detalhes Adicionais
 
-Na tela de login, sempre que o usuário e a senha são preenchidos e o botão de acesso ao sistema é clicado, um token de autenticação é mockado e armazenado no `localStorage` para simular a autenticação do usuário. Para utilizar o guard da aplicação, é necessário fazer o logout por dentro da aplicação na página /home e tentar acessar ela novamente (localhost:
-/home)
+Na tela de login, sempre que o usuário e a senha são preenchidos e o botão de acesso ao sistema é clicado, um token de autenticação é mockado e armazenado no `localStorage` para simular a autenticação do usuário. Para utilizar o guard da aplicação, é necessário fazer o logout por dentro da aplicação na página /home e tentar acessar ela novamente (http://localhost:4200/home)
 
 ## Execução de Testes Unitários
 
