@@ -1,27 +1,32 @@
 # CepViewer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+Este projeto foi criado com o [Angular CLI](https://github.com/angular/angular-cli) na versão 15.0.0.
 
-## Development server
+## Servidor de Desenvolvimento
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Execute `ng serve` para iniciar o servidor de desenvolvimento. Acesse `http://localhost:4200/` no seu navegador. A aplicação será automaticamente recarregada se você alterar qualquer um dos arquivos de origem.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Detalhes Adicionais
 
-## Build
+Na tela de login, sempre que o usuário e a senha são preenchidos e o botão de acesso ao sistema é clicado, um token de autenticação é mockado e armazenado no `localStorage` para simular a autenticação do usuário. Para utilizar o guard da aplicação, é necessário fazer o logout por dentro da aplicação na página /home e tentar acessar ela novamente (localhost:
+/home)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Execução de Testes Unitários
 
-## Running unit tests
+Execute `ng test` para executar os testes unitários via [Karma](https://karma-runner.github.io).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Bibliotecas e Recursos Utilizados no Projeto
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Este projeto utiliza várias bibliotecas e recursos para melhorar a experiência do usuário:
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- [Portinari UI](https://portinari.io/): Uma biblioteca visual que oferece componentes e estilos para aprimorar a interface do usuário.
+- [Angular Material](https://material.angular.io/): Uma biblioteca de componentes de IU para Angular que segue as diretrizes de design do Material.
+- [ngxMask](https://www.npmjs.com/package/ngx-mask): Uma biblioteca para adicionar máscaras a campos de entrada em formulários.
+- [FlexLayout](https://github.com/angular/flex-layout): Uma biblioteca que fornece um sistema de layout flexível para o Angular.
+- Gerenciamento de estado com [RxJs](https://rxjs.dev/): O projeto utiliza a biblioteca RxJs para gerenciar o estado da aplicação de forma reativa.
+- [Guarda de Rota](https://angular.io/guide/router#canactivate-requiring-authentication): Utilizada para proteger rotas que exigem autenticação.
+- Design Responsivo: A aplicação é responsiva, se ajustando a diferentes tamanhos de tela.
+- Testes Unitários com [Jasmine](https://jasmine.github.io/): São realizados testes unitários para garantir a qualidade do código.
+- Lazyload de Módulos: O carregamento de módulos é otimizado por meio do carregamento tardio (lazy loading), melhorando o desempenho da aplicação.
