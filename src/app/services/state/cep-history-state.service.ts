@@ -12,7 +12,7 @@ export class CepHistoryStateService {
 
   adicionarCepAoHistorico(cep: string) {
     const historicoAtual = this.cepHistorySubject.value;
-    historicoAtual.push(cep);
+    historicoAtual.push(cep);          
     this.cepHistorySubject.next(historicoAtual);
   }
 }

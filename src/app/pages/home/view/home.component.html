@@ -1,25 +1,44 @@
-<mat-toolbar class="toolbar" fxLayout="column" fxLayoutGap="12px">
-  <div fxLayoutAlign="center center" class="app-title">CEP Viewer</div>
-  <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="12px">
-    <mat-form-field appearance="outline" class="cep-input">
-      <input
-        matInput
-        mask="00.000-000"
-        [dropSpecialCharacters]="true"
-        type="text"
-        [formControl]="cepControl"
-        placeholder="Digite um CEP"
-      />
-      <mat-error *ngIf="cepControl.hasError"> Digite um cep válido </mat-error>
-    </mat-form-field>
-    <button mat-raised-button color="primary" (click)="pesquisarCep()" [disabled]="cepControl.invalid || !cepControl.value">
-      Pesquisar
+
+
+  <mat-toolbar class="toolbar"  fxLayoutGap="12px">  
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="12px" fxFlex="90">
+       <span class="app-title">CEP Viewer</span> 
+      <mat-form-field appearance="outline" class="cep-input">
+        <input
+        
+          matInput
+          mask="00.000-000"
+          [dropSpecialCharacters]="true"
+          type="text"
+          [formControl]="cepControl"
+          placeholder="Digite um CEP"
+        />
+        <mat-error *ngIf="cepControl.hasError"> Digite um cep válido </mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="pesquisarCep()" [disabled]="cepControl.invalid || !cepControl.value">
+        Pesquisar
+      </button>
+    </div>
+    <button mat-raised-button color="warn" (click)="logout()">
+      Loggout
     </button>
+  </mat-toolbar>
+  
+  
+  
+  
+  <div *ngIf="!pesquisando && endereco ;else pesquisado" fxLayoutGap="12px" class="pesquisado" fxLayout.xs="column">
+    <ceps-pesquisados  fxFlex="50" [cepPesquisado]="endereco"></ceps-pesquisados>
+  
+    <historico-ceps fxFlex="50"></historico-ceps>
   </div>
-</mat-toolbar>
+  
+  <ng-template #pesquisado>
+    <div *ngIf="pesquisando">
+      <mat-spinner style="margin: auto;" ></mat-spinner>
+    </div>
+    
+  </ng-template>
 
-<div *ngIf="endereco" fxLayoutGap="12px" class="pesquisado">
-  <ceps-pesquisados  fxFlex="50" [cepPesquisado]="endereco"></ceps-pesquisados>
 
-  <historico-ceps fxFlex="50"></historico-ceps>
-</div>
+

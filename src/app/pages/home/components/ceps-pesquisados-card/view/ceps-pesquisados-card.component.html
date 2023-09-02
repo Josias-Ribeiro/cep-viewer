@@ -1,18 +1,72 @@
 <mat-card class="endereco-card">
-    <mat-card-header>
-      <mat-card-title>Informações de Endereço</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p><strong>CEP:</strong> {{ cepPesquisado.cep }}</p>
-      <p><strong>Logradouro:</strong> {{ cepPesquisado.logradouro }}</p>
-      <p><strong>Complemento:</strong> {{ cepPesquisado.complemento }}</p>
-      <p><strong>Bairro:</strong> {{ cepPesquisado.bairro }}</p>
-      <p><strong>Localidade:</strong> {{ cepPesquisado.localidade }}</p>
-      <p><strong>UF:</strong> {{ cepPesquisado.uf }}</p>
-      <p><strong>IBGE:</strong> {{ cepPesquisado.ibge }}</p>
-      <p><strong>GIA:</strong> {{ cepPesquisado.gia }}</p>
-      <p><strong>DDD:</strong> {{ cepPesquisado.ddd }}</p>
-      <p><strong>SIAFI:</strong> {{ cepPesquisado.siafi }}</p>
-    </mat-card-content>
-  </mat-card>
+  <mat-card-header>
+    <mat-card-title>Informações de Endereço</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="conteudo-card" fxFlex="100"  fxLayoutGap="12px" fxLayout="column">
+    <!-- 1ª LINHA -->
+    <div fxFlex="100"  fxLayoutGap="12px" fxLayout.xs="column">
+      <mat-form-field appearance="outline" fxFlex="25" >
+        <mat-label>CEP</mat-label>
+        <input disabled matInput [(ngModel)]="cepPesquisado.cep" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" fxFlex="1 0 auto">
+        <mat-label>Logradouro</mat-label>
+        <input disabled matInput [(ngModel)]="cepPesquisado.logradouro" />
+      </mat-form-field>
+    </div>
+    <!-- FIM 1ª LINHA -->
+
+    <!-- SEGUNDA LINHA -->
+    <div fxFlex="100"  fxLayoutGap="12px" fxLayout.xs="column" >
+      <mat-form-field appearance="outline" fxFlex="1 0 auto">
+        <mat-label>Complemento </mat-label>
+        <input disabled matInput [(ngModel)]="cepPesquisado.complemento" />
+      </mat-form-field>
   
+      <mat-form-field appearance="outline" fxFlex="1 0 auto" >
+        <mat-label>Bairro</mat-label>
+        <input disabled matInput [(ngModel)]="cepPesquisado.bairro" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" fxFlex="1 0 auto">
+        <mat-label>Localidade</mat-label>
+        <input disabled matInput [(ngModel)]="cepPesquisado.localidade" />
+      </mat-form-field>
+    </div>
+    <!-- FIM SEGUNDA LINHA -->
+
+    <!-- TERCEIRA LINHA -->
+    <div fxFlex="100" fxLayoutGap="12px" fxLayout.xs="column">
+      <mat-form-field appearance="outline" fxFlex="1 0 auto">
+        <mat-label>UF</mat-label>
+        <input disabled matInput [(ngModel)]="cepPesquisado.uf" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" fxFlex="1 0 auto">
+        <mat-label>IBGE</mat-label>
+        <input disabled matInput [(ngModel)]="cepPesquisado.ibge" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" fxFlex="1 0 auto">
+        <mat-label>GIA</mat-label>
+        <input disabled matInput [(ngModel)]="cepPesquisado.gia" />
+      </mat-form-field>
+    </div>
+    <!-- FIM TERCEIRA LINHA -->
+
+    <!-- QUARTA LINHA -->
+<div fxFlex="100" fxLayoutGap="12px" fxLayout.xs="column" >
+  <mat-form-field appearance="outline" fxFlex="1 0 auto">
+    <mat-label>DDD</mat-label>
+    <input disabled matInput [(ngModel)]="cepPesquisado.ddd" />
+  </mat-form-field>
+  
+  <mat-form-field appearance="outline" fxFlex="1 0 auto">
+    <mat-label>SIAFI</mat-label>
+    <input disabled matInput [(ngModel)]="cepPesquisado.siafi" />
+  </mat-form-field>
+</div>
+    <!-- FIM QUARTA LINHA -->
+  </mat-card-content>
+</mat-card>

@@ -7,7 +7,7 @@ import { EnderecoModel } from 'src/app/models/endereco.model';
 })
 
 export class CepsPesquisadosComponent implements OnInit {
-    @Input() cepPesquisado!: EnderecoModel;
+    @Input() cepPesquisado!: EnderecoModel;   
 
     constructor() { }
 

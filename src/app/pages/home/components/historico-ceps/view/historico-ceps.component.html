@@ -3,9 +3,9 @@
       <mat-card-title>Histórico de CEPs Pesquisados</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <ul>
-        <li *ngFor="let cep of historicoDeCeps">{{ cep }}</li>
-      </ul>
+      <mat-list role="list">
+        <mat-list-item *ngFor="let cep of historicoDeCeps">{{ cep }}</mat-list-item>
+      </mat-list>          
     </mat-card-content>
   </mat-card>
   
