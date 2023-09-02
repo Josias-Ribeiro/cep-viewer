@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  CanActivate,
+import {  
   ActivatedRouteSnapshot,
   RouterStateSnapshot,
   Router,
@@ -9,7 +8,7 @@ import {
 @Injectable({
   providedIn: 'root',
 })
-export class AuthGuard implements CanActivate {
+export class AuthGuard  {
   constructor(private router: Router) {}
 
   canActivate(
@@ -22,6 +21,7 @@ export class AuthGuard implements CanActivate {
       return true;
     } else {
       this.router.navigate(['/login']);
+      alert('Usuário não conectado!')
       return false;
     }
   }

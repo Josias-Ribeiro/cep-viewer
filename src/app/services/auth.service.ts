@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { LoginModel } from '../components/login/models/login.model';
+import { LoginModel } from '../pages/login/models/login.model';
 
 
 @Injectable()

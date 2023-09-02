@@ -1,0 +1,38 @@
+<mat-toolbar class="toolbar" fxLayout="column" fxLayoutGap="12px">
+  <div  fxLayoutAlign="center center" class="app-title">
+    CEP Viewer
+  </div>
+  <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="12px">
+    <mat-form-field appearance="outline" class="cep-input">
+      <input
+        matInput
+        mask="00.000-000"
+        [dropSpecialCharacters]="true"
+        type="text"
+        [formControl]="cepControl"
+        placeholder="Digite um CEP"
+      />
+      <mat-error *ngIf="cepControl.hasError"> Digite um cep válido </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="accent" (click)="pesquisarCep()">Pesquisar</button>
+  </div>
+</mat-toolbar>
+
+
+
+
+<div fxLayout="column">
+  <pre>
+    {{ endereco | json }}  
+  </pre>
+
+  <div>
+    <h2>Histórico de CEPs Pesquisados</h2>
+    <ul>
+      <li *ngFor="let cep of historicoDeCeps">{{ cep }}</li>
+    </ul>
+  </div>
+
+</div>
+
+

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { PoMenuItem } from '@po-ui/ng-components';
-import { CepHistoryStateService } from 'src/app/services/cep-history-state.service';
-import { CepService } from 'src/app/services/pesquisa-cep.service';
+import { CepHistoryStateService } from 'src/app/services/state/cep-history-state.service';
+import { CepService } from 'src/app/services/http/pesquisa-cep.service';
 
 @Component({
   selector: 'app-home',
