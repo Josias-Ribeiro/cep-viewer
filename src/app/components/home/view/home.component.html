@@ -1,11 +1,28 @@
-<po-page-dynamic-search
-    
-    
-    
-    
-    p-load="string | (() => PoPageDynamicSearchOptions)"
-    
-    p-quick-search-value="string"
-    
-    p-title="string" >
-</po-page-dynamic-search>
+<mat-toolbar fxFlexAlign="center" fxLayout="column">
+  <span class="app-title">CEP Viewer</span>
+  <div fxLayoutGap="12px" class="container-pesquisa">
+    <mat-form-field appearance="outline">
+      <input
+        matInput        
+        mask="00.000-000"
+        [dropSpecialCharacters]="true"
+        type="text"
+        [formControl]="cepControl"        
+      />
+    </mat-form-field>
+    <button mat-raised-button (click)="pesquisarCep()">Pesquisar</button>
+  </div>
+</mat-toolbar>
+
+<div fxLayout="column">
+  <pre>
+    {{ endereco | json }}  
+  </pre>
+
+  <div>
+    <span> CEP's pesquisados</span>
+  </div>
+
+</div>
+
+

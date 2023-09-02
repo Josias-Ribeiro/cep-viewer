@@ -3,11 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home.routing.module';
 import { HomeComponent } from './home.component';
-import { PoPageDynamicSearchModule } from '@po-ui/ng-templates';
-
-
-
-
+import { MaterialCoreModule } from 'src/app/shared/material.core.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxMaskModule } from 'src/app/shared/ngx-mask.module';
 
 
 @NgModule({
@@ -17,8 +16,14 @@ import { PoPageDynamicSearchModule } from '@po-ui/ng-templates';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    PoPageDynamicSearchModule
 
+    ReactiveFormsModule,
+    FormsModule,
+    
+    MaterialCoreModule,
+    FlexLayoutModule,
+    NgxMaskModule
+    
   ]
 })
 export class HomeModule { }
